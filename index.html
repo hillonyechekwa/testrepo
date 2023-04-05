@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mouse"></p>
+
+    <button id="btn">click me!</button>
+
+    <h2 id="hello">
+        <p>hello</p>
+        <p>World</p>
+    </h2>
+
+    <script>
+
+        var x;
+        var y;
+
+        const mouse = document.getElementById("mouse")
+
+        const btn = document.getElementById("btn")
+
+        const hello = document.getElementById("hello")
+
+        function moveMouse(event) {
+            x = event.clientX
+            y = event.clientY
+
+            console.log(`x: ${x}, y: ${y}`)
+        }
+
+        btn.addEventListener("dblclick", function () {
+            hello.style.color = "red"
+        })
+
+        // window.addEventListener("mousemove", moveMouse)
+
+        
+    </script>
+</body>
+</html>
